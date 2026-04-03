@@ -34,7 +34,7 @@
 
 #define DAI_CHECK_V(A, M, ...) \
     if(!(A)) { \
-        throw std::runtime_error(fmt::format( M, ##__VA_ARGS__ )); \
+        throw std::runtime_error(fmt::format(fmt::runtime(M), ##__VA_ARGS__)); \
     }
 
 // clang-format on
